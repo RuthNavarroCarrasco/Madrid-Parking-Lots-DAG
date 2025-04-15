@@ -1,0 +1,15 @@
+## IMPORTANT! Rename this file with airflow_settings.yaml once you have it configured
+airflow:
+  connections:
+    - conn_id: datos_madrid_http
+      conn_type: http
+      conn_host: https://datos.madrid.es
+      conn_extra: '{}'
+    - conn_id: postgres_madrid_parking_lots
+      conn_type: postgres
+      conn_host: your-postgres-host
+      conn_schema: your-database-name
+      conn_login: your-username
+      conn_password: your-password
+      conn_port: 5432
+      conn_extra: '{}'

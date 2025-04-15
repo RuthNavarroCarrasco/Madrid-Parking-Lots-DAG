@@ -16,7 +16,15 @@ This project extracts, loads, and transforms data about parking lots in Madrid u
    astro login
    ```
 
-3. **Deploy your DAG**
+3. **Configure your airflow_settings.yaml in airflow-astro folder**
+
+   Configure it as shown in [airflow_settings_config.yaml](airflow-astro/airflow_settings_config.yaml). Then rename it to `airflow_settings.yaml`.
+   Once defined, run the following command to apply them:
+   ```bash
+   astro dev object import
+   ```
+
+4. **Deploy your DAG**
    ```bash
    astro deploy
    ```
