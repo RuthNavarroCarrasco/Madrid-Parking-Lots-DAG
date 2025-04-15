@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_calles_zona_ser__madrid_parking_lots
+    columns:
+      - name: gis_x
+      - name: gis_y
+      - name: distrito
+      - name: barrio
+      - name: calle
+      - name: num_finca
+      - name: color
+      - name: bateria_linea
+      - name: num_plazas

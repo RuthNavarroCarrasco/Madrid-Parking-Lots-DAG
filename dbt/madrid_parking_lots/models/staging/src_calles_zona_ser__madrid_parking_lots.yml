@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: public
+    description: Raw table for "calles zona ser"
+    schema: public
+    tables:
+      - name: calles_zona_ser_raw_prueba

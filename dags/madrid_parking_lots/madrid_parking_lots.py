@@ -56,7 +56,7 @@ def download_and_store_csv(**kwargs):
 
     pg_hook = PostgresHook(postgres_conn_id='postgres_madrid_parking_lots')
     engine = pg_hook.get_sqlalchemy_engine()
-    insertion_date = datetime.utcnow().date()
+    insertion_date = datetime.utcnow()  # incluye fecha y hora
 
     for entry in yearly_parking_lots_data:
         year = entry["Year"]

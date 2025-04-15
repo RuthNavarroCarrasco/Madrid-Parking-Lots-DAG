@@ -6,7 +6,7 @@ name: 'madrid_parking_lots'
 version: '1.0.0'
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'madrid_parking_lots'
+profile: 'default'
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -31,6 +31,10 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   madrid_parking_lots:
-    # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+    +materialized: "{{ env_var('DBT_MATERIALIZATION', 'ephemeral') }}"
+    +persist_docs:
+      relation: true
+      columns: true
+    staging:
+    marts:
+      +schema: public
