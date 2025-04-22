@@ -6,7 +6,7 @@ coordinates_computed as (
         gis_y,
         ST_X(ST_Transform(ST_SetSRID(ST_MakePoint(gis_x, gis_y), 25830), 4326)) AS longitude,
         ST_Y(ST_Transform(ST_SetSRID(ST_MakePoint(gis_x, gis_y), 25830), 4326)) AS latitude,
-        distrito,
+        barrio,
         calle,
         numero_finca,
         color,

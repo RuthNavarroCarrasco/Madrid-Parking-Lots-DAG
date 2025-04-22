@@ -13,7 +13,7 @@ zona_ser_max_insertion_date as (
     select 
         gis_x,
         gis_y,
-        distrito,
+        barrio,
         calle,
         numero_finca,
         color,

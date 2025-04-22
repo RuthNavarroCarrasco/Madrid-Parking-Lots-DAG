@@ -8,14 +8,14 @@ with
 madrid_parking_lots as (
 
     select
-        longitude,
-        latitude,
-        distrito as district,
-        calle as street,
-        numero_finca,
-        color,
-        bateria_linea as parking_type,
-        numero_plazas as total_parking_lots
+        longitude as longitud,
+        latitude as latitud,
+        barrio,
+        calle,
+        numero_finca as num_finca,
+        regexp_replace(color, '^\d+\s*', '') as color,
+        bateria_linea,
+        numero_plazas as num_plazas
     from
         {{ ref('int_coordinates__computed') }}
 
